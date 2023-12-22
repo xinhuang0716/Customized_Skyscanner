@@ -1,10 +1,10 @@
-# Cheapest Airline Ticket(to north-east Asia)
+# Customized Skyscanner
 
-Simple overview of use/purpose.
+a customized skyscanner for north-east asia flight tickets
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+use Python for crawling data, then use Tableau for data visualization
 
 ## Getting Started
 
@@ -16,12 +16,23 @@ An in-depth paragraph about your project and overview of use.
 
 ### Executing program
 
-- How to run the program
-- Step-by-step bullets
+**【Update sessionId】**
+
+- go to Tiger Airline and search a flight, for [example](https://booking.tigerairtw.com/?type=single&outbound=TPE-FUK&departureDate=2024-02-14&adult=1&children=0&infant=0&languageCode=zh-tw&promoCode=&currencyCode=TWD)
+- inpect the webpage and reload
+- find the sessionId
+  ![Alt text](./img/image.png)
+- update the sessionId in the **_./config/payload.json_**
+
+**【Update airline ticket data】**
 
 ```
-code blocks for commands
+cd Customized_Skyscanner
+python main.py
 ```
+
+**【Tableau presentation】**
+![Alt text](./img/tableau_preview.jpg)
 
 ## TODO
 

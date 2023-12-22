@@ -1,0 +1,2226 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20233.23.1017.0948                               -->
+<workbook original-version='18.1' source-build='2023.3.0 (20233.23.1017.0948)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='旅程天數' datatype='string' datatype-customized='true' name='[參數 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;4&quot;'>
+        <calculation class='tableau' formula='&quot;4&quot;' />
+        <members>
+          <member value='&quot;2&quot;' />
+          <member value='&quot;3&quot;' />
+          <member value='&quot;4&quot;' />
+          <member value='&quot;5&quot;' />
+          <member value='&quot;6&quot;' />
+          <member value='&quot;7&quot;' />
+          <member value='&quot;8&quot;' />
+          <member value='&quot;9&quot;' />
+          <member value='&quot;10&quot;' />
+          <member value='&quot;11&quot;' />
+          <member value='&quot;12&quot;' />
+          <member value='&quot;13&quot;' />
+          <member value='&quot;14&quot;' />
+          <member value='&quot;15&quot;' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='tiger airline ticket' inline='true' name='federated.1dz1rlj1fhkzbl19na93o07lavnr' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='result_tiger' name='textscan.03eblrw1s76tll1b8yors081p2js'>
+            <connection class='textscan' cleaning='yes' compat='no' csvFile='C:/Users/XinHuang/Desktop/JP trip/airline/result_tiger.csv' dataRefreshTime='' directory='C:/Users/XinHuang/Desktop/JP trip/airline/data' filename='result_tiger.csv' interpretationMode='8' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.03eblrw1s76tll1b8yors081p2js' name='result_tiger.csv' table='[result_tiger#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='zh_TW' separator=','>
+            <column datatype='string' name='出發地' ordinal='0' />
+            <column datatype='string' name='目的地' ordinal='1' />
+            <column datatype='date' name='日期' ordinal='2' />
+            <column datatype='integer' name='金額' ordinal='3' />
+            <column datatype='string' name='往返' ordinal='4' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.03eblrw1s76tll1b8yors081p2js' name='result_tiger.csv' table='[result_tiger#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='zh_TW' separator=','>
+            <column datatype='string' name='出發地' ordinal='0' />
+            <column datatype='string' name='目的地' ordinal='1' />
+            <column datatype='date' name='日期' ordinal='2' />
+            <column datatype='integer' name='金額' ordinal='3' />
+            <column datatype='string' name='往返' ordinal='4' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[result_tiger.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;zh_Hans_CN&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;zh_TW&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>出發地</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[出發地]</local-name>
+            <parent-name>[result_tiger.csv]</parent-name>
+            <remote-alias>出發地</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LZH_RCN' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[result_tiger.csv_03B7BFBFEB344D26A4221321DC78343C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>目的地</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[目的地]</local-name>
+            <parent-name>[result_tiger.csv]</parent-name>
+            <remote-alias>目的地</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LZH_RCN' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[result_tiger.csv_03B7BFBFEB344D26A4221321DC78343C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>日期</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[日期]</local-name>
+            <parent-name>[result_tiger.csv]</parent-name>
+            <remote-alias>日期</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[result_tiger.csv_03B7BFBFEB344D26A4221321DC78343C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>金額</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[金額]</local-name>
+            <parent-name>[result_tiger.csv]</parent-name>
+            <remote-alias>金額</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[result_tiger.csv_03B7BFBFEB344D26A4221321DC78343C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>往返</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[往返]</local-name>
+            <parent-name>[result_tiger.csv]</parent-name>
+            <remote-alias>往返</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LZH_RCN' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[result_tiger.csv_03B7BFBFEB344D26A4221321DC78343C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='日韓' datatype='string' name='[Calculation_1585548578489610240]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='CASE [目的地]&#13;&#10;WHEN &quot;濟州&quot; THEN &quot;韓國&quot;&#13;&#10;WHEN &quot;釜山&quot; THEN &quot;韓國&quot;&#13;&#10;WHEN &quot;大邱&quot; THEN &quot;韓國&quot;&#13;&#10;WHEN &quot;仁川&quot; THEN &quot;韓國&quot;&#13;&#10;ELSE &quot;日本&quot;&#13;&#10;END' />
+      </column>
+      <column caption='YYYYMM' datatype='string' name='[Calculation_1585548578500165645]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='LEFT(STR([日期]), 4) + &quot; 年 &quot; + MID(STR([日期]), 6, 2) + &quot; 月&quot;' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='result_tiger.csv' datatype='table' name='[__tableau_internal_object_id__].[result_tiger.csv_03B7BFBFEB344D26A4221321DC78343C]' role='measure' type='quantitative' />
+      <column datatype='string' name='[目的地]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' _.fcp.SchemaViewerObjectModel.true...common-percentage='0.795494' _.fcp.SchemaViewerObjectModel.true...user-set-layout-v2='true' dim-ordering='alphabetic' measure-ordering='alphabetic' parameter-percentage='0.204506' rowDisplayCount='10000' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Taiwan&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='result_tiger.csv' id='result_tiger.csv_03B7BFBFEB344D26A4221321DC78343C'>
+            <properties context=''>
+              <relation connection='textscan.03eblrw1s76tll1b8yors081p2js' name='result_tiger.csv' table='[result_tiger#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='zh_TW' separator=','>
+                  <column datatype='string' name='出發地' ordinal='0' />
+                  <column datatype='string' name='目的地' ordinal='1' />
+                  <column datatype='date' name='日期' ordinal='2' />
+                  <column datatype='integer' name='金額' ordinal='3' />
+                  <column datatype='string' name='往返' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='tiger airline optimal trip' inline='true' name='federated.0a4vrc51d5c9c716mtqoj08kk5tq' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='tiger' name='textscan.1pu3bkp079v1wq1gxlfg50vudguh'>
+            <connection class='textscan' directory='C:/Users/XinHuang/Desktop/JP trip/airline/data' filename='optimal_trip_tiger.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.1pu3bkp079v1wq1gxlfg50vudguh' name='optimal_trip_tiger.csv' table='[optimal_trip_tiger#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='zh_TW' separator=','>
+            <column datatype='string' name='目的地' ordinal='0' />
+            <column datatype='date' name='日期' ordinal='1' />
+            <column datatype='integer' name='總金額' ordinal='2' />
+            <column datatype='integer' name='旅程日期' ordinal='3' />
+            <column datatype='string' name='Rank' ordinal='4' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.1pu3bkp079v1wq1gxlfg50vudguh' name='optimal_trip_tiger.csv' table='[optimal_trip_tiger#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='zh_TW' separator=','>
+            <column datatype='string' name='目的地' ordinal='0' />
+            <column datatype='date' name='日期' ordinal='1' />
+            <column datatype='integer' name='總金額' ordinal='2' />
+            <column datatype='integer' name='旅程日期' ordinal='3' />
+            <column datatype='string' name='Rank' ordinal='4' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[optimal_trip_tiger.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;zh_Hans_CN&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;zh_TW&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>目的地</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[目的地]</local-name>
+            <parent-name>[optimal_trip_tiger.csv]</parent-name>
+            <remote-alias>目的地</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LZH_RCN' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[optimal_trip_tiger.csv_184F1AE6DC8741C29AD9992232001A66]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>日期</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[日期]</local-name>
+            <parent-name>[optimal_trip_tiger.csv]</parent-name>
+            <remote-alias>日期</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[optimal_trip_tiger.csv_184F1AE6DC8741C29AD9992232001A66]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>總金額</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[總金額]</local-name>
+            <parent-name>[optimal_trip_tiger.csv]</parent-name>
+            <remote-alias>總金額</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[optimal_trip_tiger.csv_184F1AE6DC8741C29AD9992232001A66]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>旅程日期</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[旅程日期]</local-name>
+            <parent-name>[optimal_trip_tiger.csv]</parent-name>
+            <remote-alias>旅程日期</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[optimal_trip_tiger.csv_184F1AE6DC8741C29AD9992232001A66]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rank</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Rank]</local-name>
+            <parent-name>[optimal_trip_tiger.csv]</parent-name>
+            <remote-alias>Rank</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LZH_RCN' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[optimal_trip_tiger.csv_184F1AE6DC8741C29AD9992232001A66]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='YYYYMM' datatype='string' name='[Calculation_922956484389093380]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='LEFT(STR([日期]), 4) + &quot; 年 &quot; + MID(STR([日期]), 6, 2) + &quot; 月&quot;' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='optimal_trip_tiger.csv' datatype='table' name='[__tableau_internal_object_id__].[optimal_trip_tiger.csv_184F1AE6DC8741C29AD9992232001A66]' role='measure' type='quantitative' />
+      <column aggregation='Sum' datatype='integer' name='[旅程日期]' role='dimension' type='ordinal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Taiwan&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='optimal_trip_tiger.csv' id='optimal_trip_tiger.csv_184F1AE6DC8741C29AD9992232001A66'>
+            <properties context=''>
+              <relation connection='textscan.1pu3bkp079v1wq1gxlfg50vudguh' name='optimal_trip_tiger.csv' table='[optimal_trip_tiger#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='zh_TW' separator=','>
+                  <column datatype='string' name='目的地' ordinal='0' />
+                  <column datatype='date' name='日期' ordinal='1' />
+                  <column datatype='integer' name='總金額' ordinal='2' />
+                  <column datatype='integer' name='旅程日期' ordinal='3' />
+                  <column datatype='string' name='Rank' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Slogan'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tiger airline optimal trip' name='federated.0a4vrc51d5c9c716mtqoj08kk5tq' />
+            <datasource caption='參數' name='Parameters' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='旅程天數' datatype='string' datatype-customized='true' name='[參數 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;4&quot;'>
+              <calculation class='tableau' formula='&quot;4&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0a4vrc51d5c9c716mtqoj08kk5tq'>
+            <column-instance column='[旅程日期]' derivation='None' name='[none:旅程日期:ok]' pivot='key' type='ordinal' />
+            <column aggregation='Sum' datatype='integer' name='[旅程日期]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:旅程日期:ok]'>
+            <groupfilter expression='STR([旅程日期]) = [Parameters].[參數 1]' function='filter' user:ui-marker='filter-by'>
+              <groupfilter function='level-members' level='[none:旅程日期:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:旅程日期:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#faf4e7' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:旅程日期:ok]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text />
+            </customized-tooltip>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontname='微軟正黑體' fontsize='14'>在 </run>
+                <run bold='true' fontcolor='#b07aa1' fontname='微軟正黑體' fontsize='14'><![CDATA[<[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:旅程日期:ok]>]]></run>
+                <run bold='true' fontname='微軟正黑體' fontsize='14'> 天的假期規劃下，推薦您前往以下地點</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{9A19E5C9-7670-4B7C-9691-A58B47945CCF}' />
+    </worksheet>
+    <worksheet name='TigerTop1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tiger airline optimal trip' name='federated.0a4vrc51d5c9c716mtqoj08kk5tq' />
+            <datasource caption='參數' name='Parameters' />
+            <datasource caption='tiger airline ticket' name='federated.1dz1rlj1fhkzbl19na93o07lavnr' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='旅程天數' datatype='string' datatype-customized='true' name='[參數 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;4&quot;'>
+              <calculation class='tableau' formula='&quot;4&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0a4vrc51d5c9c716mtqoj08kk5tq'>
+            <column caption='YYYYMM' datatype='string' name='[Calculation_922956484389093380]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='LEFT(STR([日期]), 4) + &quot; 年 &quot; + MID(STR([日期]), 6, 2) + &quot; 月&quot;' />
+            </column>
+            <column datatype='string' name='[Rank]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_922956484389093380]' derivation='None' name='[none:Calculation_922956484389093380:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Rank]' derivation='None' name='[none:Rank:nk]' pivot='key' type='nominal' />
+            <column-instance column='[旅程日期]' derivation='None' name='[none:旅程日期:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[總金額]' derivation='Sum' name='[sum:總金額:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[日期]' derivation='Day-Trunc' name='[tdy:日期:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Sum' datatype='integer' name='[旅程日期]' role='dimension' type='ordinal' />
+            <column datatype='date' name='[日期]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[總金額]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1dz1rlj1fhkzbl19na93o07lavnr'>
+            <column caption='YYYYMM' datatype='string' name='[Calculation_1585548578500165645]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='LEFT(STR([日期]), 4) + &quot; 年 &quot; + MID(STR([日期]), 6, 2) + &quot; 月&quot;' />
+            </column>
+            <column-instance column='[Calculation_1585548578500165645]' derivation='None' name='[none:Calculation_1585548578500165645:nk]' pivot='key' type='nominal' />
+            <column datatype='date' name='[日期]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:Rank:nk]'>
+            <groupfilter function='member' level='[none:Rank:nk]' member='&quot;Top1&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:旅程日期:ok]'>
+            <groupfilter expression='STR([旅程日期]) = [Parameters].[參數 1]' function='filter' user:ui-marker='filter-by'>
+              <groupfilter function='level-members' level='[none:旅程日期:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:Calculation_1585548578500165645:nk]' filter-group='3'>
+            <groupfilter function='member' level='[none:Calculation_1585548578500165645:nk]' member='&quot;2024 年 01 月&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <target field='[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:Calculation_922956484389093380:nk]' />
+          </filter>
+          <slices>
+            <column>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:旅程日期:ok]</column>
+            <column>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:Rank:nk]</column>
+            <column>[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:Calculation_1585548578500165645:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f5f5f5' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[tdy:日期:qk]' />
+              <text column='[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[sum:總金額:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontname='微軟正黑體' fontsize='12'><![CDATA[<[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[tdy:日期:qk]> 啟程 ]]></run>
+                <run>Æ&#10;&#10;</run>
+                <run bold='true' fontname='微軟正黑體' fontsize='12'>總價</run>
+                <run bold='true' fontcolor='#e15759' fontname='微軟正黑體' fontsize='12'><![CDATA[ <[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[sum:總金額:qk]>]]></run>
+                <run bold='true' fontname='微軟正黑體' fontsize='12'> !!!</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{B1EA6C2F-0EF2-44F9-B2CB-444CF5DF983C}' />
+    </worksheet>
+    <worksheet name='TigerTop1 - dest'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tiger airline optimal trip' name='federated.0a4vrc51d5c9c716mtqoj08kk5tq' />
+            <datasource caption='參數' name='Parameters' />
+            <datasource caption='tiger airline ticket' name='federated.1dz1rlj1fhkzbl19na93o07lavnr' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='旅程天數' datatype='string' datatype-customized='true' name='[參數 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;4&quot;'>
+              <calculation class='tableau' formula='&quot;4&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0a4vrc51d5c9c716mtqoj08kk5tq'>
+            <column caption='YYYYMM' datatype='string' name='[Calculation_922956484389093380]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='LEFT(STR([日期]), 4) + &quot; 年 &quot; + MID(STR([日期]), 6, 2) + &quot; 月&quot;' />
+            </column>
+            <column datatype='string' name='[Rank]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_922956484389093380]' derivation='None' name='[none:Calculation_922956484389093380:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Rank]' derivation='None' name='[none:Rank:nk]' pivot='key' type='nominal' />
+            <column-instance column='[旅程日期]' derivation='None' name='[none:旅程日期:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[目的地]' derivation='None' name='[none:目的地:nk]' pivot='key' type='nominal' />
+            <column-instance column='[總金額]' derivation='Sum' name='[sum:總金額:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[日期]' derivation='Day-Trunc' name='[tdy:日期:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Sum' datatype='integer' name='[旅程日期]' role='dimension' type='ordinal' />
+            <column datatype='date' name='[日期]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[目的地]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[總金額]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1dz1rlj1fhkzbl19na93o07lavnr'>
+            <column caption='YYYYMM' datatype='string' name='[Calculation_1585548578500165645]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='LEFT(STR([日期]), 4) + &quot; 年 &quot; + MID(STR([日期]), 6, 2) + &quot; 月&quot;' />
+            </column>
+            <column-instance column='[Calculation_1585548578500165645]' derivation='None' name='[none:Calculation_1585548578500165645:nk]' pivot='key' type='nominal' />
+            <column datatype='date' name='[日期]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:Rank:nk]'>
+            <groupfilter function='member' level='[none:Rank:nk]' member='&quot;Top1&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:旅程日期:ok]'>
+            <groupfilter expression='STR([旅程日期]) = [Parameters].[參數 1]' function='filter' user:ui-marker='filter-by'>
+              <groupfilter function='level-members' level='[none:旅程日期:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:Calculation_1585548578500165645:nk]' filter-group='3'>
+            <groupfilter function='member' level='[none:Calculation_1585548578500165645:nk]' member='&quot;2024 年 01 月&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <target field='[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:Calculation_922956484389093380:nk]' />
+          </filter>
+          <slices>
+            <column>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:旅程日期:ok]</column>
+            <column>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:Rank:nk]</column>
+            <column>[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:Calculation_1585548578500165645:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='band-color' scope='rows' value='#00000000' />
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='band-size' scope='rows' value='1' />
+            <format attr='background-color' value='#f5f5f5' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[tdy:日期:qk]' />
+              <text column='[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[sum:總金額:qk]' />
+              <text column='[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:目的地:nk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontcolor='#499894' fontname='微軟正黑體' fontsize='16'>Top1</run>
+                <run>Æ&#10;&#10;</run>
+                <run bold='true' fontname='微軟正黑體' fontsize='26'><![CDATA[<[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:目的地:nk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{245E65EE-7D73-44A4-B7B8-6D4F951F0CC8}' />
+    </worksheet>
+    <worksheet name='TigerTop2'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tiger airline optimal trip' name='federated.0a4vrc51d5c9c716mtqoj08kk5tq' />
+            <datasource caption='參數' name='Parameters' />
+            <datasource caption='tiger airline ticket' name='federated.1dz1rlj1fhkzbl19na93o07lavnr' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='旅程天數' datatype='string' datatype-customized='true' name='[參數 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;4&quot;'>
+              <calculation class='tableau' formula='&quot;4&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0a4vrc51d5c9c716mtqoj08kk5tq'>
+            <column caption='YYYYMM' datatype='string' name='[Calculation_922956484389093380]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='LEFT(STR([日期]), 4) + &quot; 年 &quot; + MID(STR([日期]), 6, 2) + &quot; 月&quot;' />
+            </column>
+            <column datatype='string' name='[Rank]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_922956484389093380]' derivation='None' name='[none:Calculation_922956484389093380:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Rank]' derivation='None' name='[none:Rank:nk]' pivot='key' type='nominal' />
+            <column-instance column='[旅程日期]' derivation='None' name='[none:旅程日期:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[總金額]' derivation='Sum' name='[sum:總金額:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[日期]' derivation='Day-Trunc' name='[tdy:日期:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Sum' datatype='integer' name='[旅程日期]' role='dimension' type='ordinal' />
+            <column datatype='date' name='[日期]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[總金額]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1dz1rlj1fhkzbl19na93o07lavnr'>
+            <column caption='YYYYMM' datatype='string' name='[Calculation_1585548578500165645]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='LEFT(STR([日期]), 4) + &quot; 年 &quot; + MID(STR([日期]), 6, 2) + &quot; 月&quot;' />
+            </column>
+            <column-instance column='[Calculation_1585548578500165645]' derivation='None' name='[none:Calculation_1585548578500165645:nk]' pivot='key' type='nominal' />
+            <column datatype='date' name='[日期]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:Rank:nk]'>
+            <groupfilter function='member' level='[none:Rank:nk]' member='&quot;Top2&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:旅程日期:ok]'>
+            <groupfilter expression='STR([旅程日期]) = [Parameters].[參數 1]' function='filter' user:ui-marker='filter-by'>
+              <groupfilter function='level-members' level='[none:旅程日期:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:Calculation_1585548578500165645:nk]' filter-group='3'>
+            <groupfilter function='member' level='[none:Calculation_1585548578500165645:nk]' member='&quot;2024 年 01 月&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <target field='[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:Calculation_922956484389093380:nk]' />
+          </filter>
+          <slices>
+            <column>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:旅程日期:ok]</column>
+            <column>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:Rank:nk]</column>
+            <column>[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:Calculation_1585548578500165645:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f5f5f5' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[tdy:日期:qk]' />
+              <text column='[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[sum:總金額:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontname='微軟正黑體' fontsize='12'><![CDATA[<[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[tdy:日期:qk]> 啟程 ]]></run>
+                <run>Æ&#10;&#10;</run>
+                <run bold='true' fontname='微軟正黑體' fontsize='12'>總價</run>
+                <run bold='true' fontcolor='#e15759' fontname='微軟正黑體' fontsize='12'><![CDATA[ <[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[sum:總金額:qk]>]]></run>
+                <run bold='true' fontname='微軟正黑體' fontsize='12'> !!!</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{F4AC2C7B-07E9-4B81-AB63-A29B3F63B0A4}' />
+    </worksheet>
+    <worksheet name='TigerTop2 - dest'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tiger airline optimal trip' name='federated.0a4vrc51d5c9c716mtqoj08kk5tq' />
+            <datasource caption='參數' name='Parameters' />
+            <datasource caption='tiger airline ticket' name='federated.1dz1rlj1fhkzbl19na93o07lavnr' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='旅程天數' datatype='string' datatype-customized='true' name='[參數 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;4&quot;'>
+              <calculation class='tableau' formula='&quot;4&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0a4vrc51d5c9c716mtqoj08kk5tq'>
+            <column caption='YYYYMM' datatype='string' name='[Calculation_922956484389093380]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='LEFT(STR([日期]), 4) + &quot; 年 &quot; + MID(STR([日期]), 6, 2) + &quot; 月&quot;' />
+            </column>
+            <column datatype='string' name='[Rank]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_922956484389093380]' derivation='None' name='[none:Calculation_922956484389093380:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Rank]' derivation='None' name='[none:Rank:nk]' pivot='key' type='nominal' />
+            <column-instance column='[旅程日期]' derivation='None' name='[none:旅程日期:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[目的地]' derivation='None' name='[none:目的地:nk]' pivot='key' type='nominal' />
+            <column-instance column='[總金額]' derivation='Sum' name='[sum:總金額:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[日期]' derivation='Day-Trunc' name='[tdy:日期:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Sum' datatype='integer' name='[旅程日期]' role='dimension' type='ordinal' />
+            <column datatype='date' name='[日期]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[目的地]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[總金額]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1dz1rlj1fhkzbl19na93o07lavnr'>
+            <column caption='YYYYMM' datatype='string' name='[Calculation_1585548578500165645]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='LEFT(STR([日期]), 4) + &quot; 年 &quot; + MID(STR([日期]), 6, 2) + &quot; 月&quot;' />
+            </column>
+            <column-instance column='[Calculation_1585548578500165645]' derivation='None' name='[none:Calculation_1585548578500165645:nk]' pivot='key' type='nominal' />
+            <column datatype='date' name='[日期]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:Rank:nk]'>
+            <groupfilter function='member' level='[none:Rank:nk]' member='&quot;Top2&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:旅程日期:ok]'>
+            <groupfilter expression='STR([旅程日期]) = [Parameters].[參數 1]' function='filter' user:ui-marker='filter-by'>
+              <groupfilter function='level-members' level='[none:旅程日期:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:Calculation_1585548578500165645:nk]' filter-group='3'>
+            <groupfilter function='member' level='[none:Calculation_1585548578500165645:nk]' member='&quot;2024 年 01 月&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <target field='[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:Calculation_922956484389093380:nk]' />
+          </filter>
+          <slices>
+            <column>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:旅程日期:ok]</column>
+            <column>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:Rank:nk]</column>
+            <column>[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:Calculation_1585548578500165645:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f5f5f5' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[tdy:日期:qk]' />
+              <text column='[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[sum:總金額:qk]' />
+              <text column='[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:目的地:nk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontcolor='#4e79a7' fontname='微軟正黑體' fontsize='16'>Top2</run>
+                <run>Æ&#10;&#10;</run>
+                <run bold='true' fontname='微軟正黑體' fontsize='26'><![CDATA[<[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:目的地:nk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{4D26C96E-A067-40A8-8288-4BE5596F0647}' />
+    </worksheet>
+    <worksheet name='TigerTop3'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tiger airline optimal trip' name='federated.0a4vrc51d5c9c716mtqoj08kk5tq' />
+            <datasource caption='參數' name='Parameters' />
+            <datasource caption='tiger airline ticket' name='federated.1dz1rlj1fhkzbl19na93o07lavnr' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='旅程天數' datatype='string' datatype-customized='true' name='[參數 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;4&quot;'>
+              <calculation class='tableau' formula='&quot;4&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0a4vrc51d5c9c716mtqoj08kk5tq'>
+            <column caption='YYYYMM' datatype='string' name='[Calculation_922956484389093380]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='LEFT(STR([日期]), 4) + &quot; 年 &quot; + MID(STR([日期]), 6, 2) + &quot; 月&quot;' />
+            </column>
+            <column datatype='string' name='[Rank]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_922956484389093380]' derivation='None' name='[none:Calculation_922956484389093380:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Rank]' derivation='None' name='[none:Rank:nk]' pivot='key' type='nominal' />
+            <column-instance column='[旅程日期]' derivation='None' name='[none:旅程日期:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[總金額]' derivation='Sum' name='[sum:總金額:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[日期]' derivation='Day-Trunc' name='[tdy:日期:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Sum' datatype='integer' name='[旅程日期]' role='dimension' type='ordinal' />
+            <column datatype='date' name='[日期]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[總金額]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1dz1rlj1fhkzbl19na93o07lavnr'>
+            <column caption='YYYYMM' datatype='string' name='[Calculation_1585548578500165645]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='LEFT(STR([日期]), 4) + &quot; 年 &quot; + MID(STR([日期]), 6, 2) + &quot; 月&quot;' />
+            </column>
+            <column-instance column='[Calculation_1585548578500165645]' derivation='None' name='[none:Calculation_1585548578500165645:nk]' pivot='key' type='nominal' />
+            <column datatype='date' name='[日期]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:Rank:nk]'>
+            <groupfilter function='member' level='[none:Rank:nk]' member='&quot;Top3&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:旅程日期:ok]'>
+            <groupfilter expression='STR([旅程日期]) = [Parameters].[參數 1]' function='filter' user:ui-marker='filter-by'>
+              <groupfilter function='level-members' level='[none:旅程日期:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:Calculation_1585548578500165645:nk]' filter-group='3'>
+            <groupfilter function='member' level='[none:Calculation_1585548578500165645:nk]' member='&quot;2024 年 01 月&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <target field='[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:Calculation_922956484389093380:nk]' />
+          </filter>
+          <slices>
+            <column>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:旅程日期:ok]</column>
+            <column>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:Rank:nk]</column>
+            <column>[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:Calculation_1585548578500165645:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f5f5f5' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[tdy:日期:qk]' />
+              <text column='[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[sum:總金額:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontname='微軟正黑體' fontsize='12'><![CDATA[<[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[tdy:日期:qk]> 啟程 ]]></run>
+                <run>Æ&#10;&#10;</run>
+                <run bold='true' fontname='微軟正黑體' fontsize='12'>總價</run>
+                <run bold='true' fontcolor='#e15759' fontname='微軟正黑體' fontsize='12'><![CDATA[ <[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[sum:總金額:qk]>]]></run>
+                <run bold='true' fontname='微軟正黑體' fontsize='12'> !!!</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{1B67768D-4237-4C9E-913F-7E089AD61AF7}' />
+    </worksheet>
+    <worksheet name='TigerTop3 - dest'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tiger airline optimal trip' name='federated.0a4vrc51d5c9c716mtqoj08kk5tq' />
+            <datasource caption='參數' name='Parameters' />
+            <datasource caption='tiger airline ticket' name='federated.1dz1rlj1fhkzbl19na93o07lavnr' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='旅程天數' datatype='string' datatype-customized='true' name='[參數 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;4&quot;'>
+              <calculation class='tableau' formula='&quot;4&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0a4vrc51d5c9c716mtqoj08kk5tq'>
+            <column caption='YYYYMM' datatype='string' name='[Calculation_922956484389093380]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='LEFT(STR([日期]), 4) + &quot; 年 &quot; + MID(STR([日期]), 6, 2) + &quot; 月&quot;' />
+            </column>
+            <column datatype='string' name='[Rank]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_922956484389093380]' derivation='None' name='[none:Calculation_922956484389093380:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Rank]' derivation='None' name='[none:Rank:nk]' pivot='key' type='nominal' />
+            <column-instance column='[旅程日期]' derivation='None' name='[none:旅程日期:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[目的地]' derivation='None' name='[none:目的地:nk]' pivot='key' type='nominal' />
+            <column-instance column='[總金額]' derivation='Sum' name='[sum:總金額:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[日期]' derivation='Day-Trunc' name='[tdy:日期:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Sum' datatype='integer' name='[旅程日期]' role='dimension' type='ordinal' />
+            <column datatype='date' name='[日期]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[目的地]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[總金額]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1dz1rlj1fhkzbl19na93o07lavnr'>
+            <column caption='YYYYMM' datatype='string' name='[Calculation_1585548578500165645]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='LEFT(STR([日期]), 4) + &quot; 年 &quot; + MID(STR([日期]), 6, 2) + &quot; 月&quot;' />
+            </column>
+            <column-instance column='[Calculation_1585548578500165645]' derivation='None' name='[none:Calculation_1585548578500165645:nk]' pivot='key' type='nominal' />
+            <column datatype='date' name='[日期]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:Rank:nk]'>
+            <groupfilter function='member' level='[none:Rank:nk]' member='&quot;Top3&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:旅程日期:ok]'>
+            <groupfilter expression='STR([旅程日期]) = [Parameters].[參數 1]' function='filter' user:ui-marker='filter-by'>
+              <groupfilter function='level-members' level='[none:旅程日期:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:Calculation_1585548578500165645:nk]' filter-group='3'>
+            <groupfilter function='member' level='[none:Calculation_1585548578500165645:nk]' member='&quot;2024 年 01 月&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <target field='[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:Calculation_922956484389093380:nk]' />
+          </filter>
+          <slices>
+            <column>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:旅程日期:ok]</column>
+            <column>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:Rank:nk]</column>
+            <column>[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:Calculation_1585548578500165645:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f5f5f5' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[tdy:日期:qk]' />
+              <text column='[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[sum:總金額:qk]' />
+              <text column='[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:目的地:nk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontcolor='#75a1c7' fontname='微軟正黑體' fontsize='16'>Top3</run>
+                <run>Æ&#10;&#10;</run>
+                <run bold='true' fontname='微軟正黑體' fontsize='26'><![CDATA[<[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:目的地:nk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{74748868-3000-4B3F-A581-040DFDC68010}' />
+    </worksheet>
+    <worksheet name='Tiger機票細項'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontname='微軟正黑體'><![CDATA[<[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:Calculation_1585548578500165645:nk]> ]]></run>
+            <run bold='true' fontalignment='1' fontname='微軟正黑體' fontsize='14'>當日最便宜機票</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tiger airline ticket' name='federated.1dz1rlj1fhkzbl19na93o07lavnr' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1dz1rlj1fhkzbl19na93o07lavnr'>
+            <column caption='YYYYMM' datatype='string' name='[Calculation_1585548578500165645]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='LEFT(STR([日期]), 4) + &quot; 年 &quot; + MID(STR([日期]), 6, 2) + &quot; 月&quot;' />
+            </column>
+            <column caption='IF (MIN([金額]) &gt; 0) THEN MIN([金額]) ELSE NULL END' datatype='integer' name='[Calculation_922956484337983489]' role='measure' type='quantitative' user:unnamed='Tiger機票細項'>
+              <calculation class='tableau' formula='IF (MIN([金額]) &gt; 0) THEN MIN([金額]) ELSE NULL END' />
+            </column>
+            <column caption='STR(DATEPART(&apos;day&apos;, [日期])) + &apos;日&apos;' datatype='string' name='[Calculation_922956484338270211]' role='dimension' type='nominal' user:unnamed='Tiger機票細項'>
+              <calculation class='tableau' formula='STR(DATEPART(&apos;day&apos;, [日期])) + &apos;日&apos;' />
+            </column>
+            <column-instance column='[Calculation_1585548578500165645]' derivation='None' name='[none:Calculation_1585548578500165645:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_922956484338270211]' derivation='None' name='[none:Calculation_922956484338270211:nk]' pivot='key' type='nominal' />
+            <column-instance column='[往返]' derivation='None' name='[none:往返:nk]' pivot='key' type='nominal' />
+            <column-instance column='[目的地]' derivation='None' name='[none:目的地:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_922956484337983489]' derivation='User' name='[usr:Calculation_922956484337983489:qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[往返]' role='dimension' type='nominal' />
+            <column datatype='date' name='[日期]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[目的地]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column datatype='integer' name='[金額]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:Calculation_1585548578500165645:nk]' filter-group='3'>
+            <groupfilter function='member' level='[none:Calculation_1585548578500165645:nk]' member='&quot;2024 年 01 月&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <target field='[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:Calculation_1585548578500165645:nk]' />
+          </filter>
+          <filter class='categorical' column='[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:目的地:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:目的地:nk]' member='&quot;沖繩&quot;' />
+              <groupfilter function='member' level='[none:目的地:nk]' member='&quot;福岡&quot;' />
+              <groupfilter function='member' level='[none:目的地:nk]' member='&quot;釜山&quot;' />
+              <groupfilter function='member' level='[none:目的地:nk]' member='&quot;濟州&quot;' />
+              <groupfilter function='member' level='[none:目的地:nk]' member='&quot;名古屋&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:目的地:nk]</column>
+            <column>[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:Calculation_1585548578500165645:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='color' value='#333333' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='height' field='[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:目的地:nk]' value='24' />
+            <format attr='height' field='[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:往返:nk]' value='24' />
+            <format attr='background-color' field='[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:目的地:nk]' value='#f7f7f0' />
+            <format attr='background-color' scope='cols' value='#00000000' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-family' field='[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:目的地:nk]' value='微軟正黑體' />
+            <format attr='font-weight' field='[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:目的地:nk]' value='bold' />
+            <format attr='text-align' field='[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:目的地:nk]' value='center' />
+            <format attr='vertical-align' field='[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:目的地:nk]' value='center' />
+            <format attr='font-family' field='[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:往返:nk]' value='微軟正黑體' />
+            <format attr='font-weight' field='[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:往返:nk]' value='bold' />
+            <format attr='font-size' field='[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:往返:nk]' value='10' />
+            <format attr='color' field='[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:往返:nk]' value='#4e79a7' />
+            <format attr='font-size' field='[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:目的地:nk]' value='10' />
+            <format attr='font-family' field='[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:Calculation_922956484338270211:nk]' value='微軟正黑體' />
+            <format attr='font-weight' field='[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:Calculation_922956484338270211:nk]' value='bold' />
+            <format attr='text-align' field='[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:Calculation_922956484338270211:nk]' value='center' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#faf4e7' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='border-color' value='#75a1c7' />
+            <format attr='border-width' value='0' />
+            <format attr='border-style' value='none' />
+            <format attr='background-color' value='#f5c61c81' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:目的地:nk]' value='目的地&#10;' />
+            <format attr='title' field='[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:Calculation_1585548578500165645:nk]' value='年月' />
+            <format attr='font-family' value='微軟正黑體' />
+            <format attr='border-color' value='#4e79a7' />
+            <format attr='border-width' value='0' />
+            <format attr='border-style' value='none' />
+            <format attr='background-color' value='#baf0f0' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+          <style-rule element='quick-filter-title'>
+            <format attr='font-weight' value='bold' />
+            <format attr='font-size' value='12' />
+            <format attr='text-align' value='center' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <text column='[federated.1dz1rlj1fhkzbl19na93o07lavnr].[usr:Calculation_922956484337983489:qk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text />
+            </customized-tooltip>
+            <customized-label>
+              <formatted-text>
+                <run fontname='Arial' fontsize='8'>&lt;</run>
+                <run fontname='Arial' fontsize='8'>[federated.1dz1rlj1fhkzbl19na93o07lavnr].[usr:Calculation_922956484337983489:qk]</run>
+                <run fontname='Arial' fontsize='8'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='size' value='1.3953038454055786' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-transparency' value='255' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:Calculation_922956484338270211:nk]</rows>
+        <cols>([federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:目的地:nk] / [federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:往返:nk])</cols>
+      </table>
+      <simple-id uuid='{5F44A921-A842-4EA2-A0DE-50513B698631}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Tiger'>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#faf4e7' />
+        </style-rule>
+        <style-rule element='parameter-ctrl'>
+          <format attr='font-weight' value='bold' />
+          <format attr='font-family' value='微軟正黑體' />
+          <format attr='background-color' value='#baf0f0' />
+          <format attr='font-size' value='9' />
+        </style-rule>
+        <style-rule element='parameter-ctrl-title'>
+          <format attr='font-size' value='12' />
+          <format attr='font-weight' value='bold' />
+          <format attr='font-family' value='微軟正黑體' />
+          <format attr='text-align' value='center' />
+        </style-rule>
+      </style>
+      <size sizing-mode='automatic' />
+      <datasources>
+        <datasource caption='參數' name='Parameters' />
+        <datasource caption='tiger airline ticket' name='federated.1dz1rlj1fhkzbl19na93o07lavnr' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='旅程天數' datatype='string' datatype-customized='true' name='[參數 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;4&quot;'>
+          <calculation class='tableau' formula='&quot;4&quot;' />
+          <members>
+            <member value='&quot;2&quot;' />
+            <member value='&quot;3&quot;' />
+            <member value='&quot;4&quot;' />
+            <member value='&quot;5&quot;' />
+            <member value='&quot;6&quot;' />
+            <member value='&quot;7&quot;' />
+            <member value='&quot;8&quot;' />
+            <member value='&quot;9&quot;' />
+            <member value='&quot;10&quot;' />
+            <member value='&quot;11&quot;' />
+            <member value='&quot;12&quot;' />
+            <member value='&quot;13&quot;' />
+            <member value='&quot;14&quot;' />
+            <member value='&quot;15&quot;' />
+          </members>
+        </column>
+      </datasource-dependencies>
+      <datasource-dependencies datasource='federated.1dz1rlj1fhkzbl19na93o07lavnr'>
+        <column caption='YYYYMM' datatype='string' name='[Calculation_1585548578500165645]' role='dimension' type='nominal'>
+          <calculation class='tableau' formula='LEFT(STR([日期]), 4) + &quot; 年 &quot; + MID(STR([日期]), 6, 2) + &quot; 月&quot;' />
+        </column>
+        <column-instance column='[Calculation_1585548578500165645]' derivation='None' name='[none:Calculation_1585548578500165645:nk]' pivot='key' type='nominal' />
+        <column-instance column='[目的地]' derivation='None' name='[none:目的地:nk]' pivot='key' type='nominal' />
+        <column datatype='string' name='[目的地]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98048' id='65' param='horz' type-v2='layout-flow' w='99150' x='425' y='976'>
+            <zone h='98048' id='62' param='horz' type-v2='layout-flow' w='99150' x='425' y='976'>
+              <zone h='98048' id='57' param='horz' type-v2='layout-flow' w='99150' x='425' y='976'>
+                <zone h='98048' id='37' param='horz' type-v2='layout-flow' w='99150' x='425' y='976'>
+                  <zone h='98048' id='6' type-v2='layout-basic' w='99150' x='425' y='976'>
+                    <zone forceUpdate='true' h='12432' id='12' is-scaled='1' param='C:/Users/XinHuang/Desktop/JP trip/airline/img/Tigerair logo.png' type-v2='bitmap' url='https://www.tigerairtw.com/' w='99150' x='425' y='976'>
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                    <zone h='85616' id='15' name='Tiger機票細項' w='53506' x='425' y='13408'>
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                    <zone h='4690' id='19' mode='checkdropdown' name='Tiger機票細項' param='[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:目的地:nk]' type-v2='filter' w='22814' x='53931' y='13408'>
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                    <zone custom-title='true' h='8237' id='38' mode='compact' param='[Parameters].[參數 1]' type-v2='paramctrl' w='45644' x='53931' y='18098'>
+                      <formatted-text>
+                        <run fontsize='10'>旅程天數</run>
+                      </formatted-text>
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                    <zone h='4690' id='18' mode='dropdown' name='Tiger機票細項' param='[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:Calculation_1585548578500165645:nk]' type-v2='filter' w='22830' x='76745' y='13408'>
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                    <zone h='9754' id='51' name='Slogan' show-title='false' w='45644' x='53931' y='26335'>
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                    <zone h='21222' id='55' name='TigerTop1' show-title='false' w='22830' x='76745' y='36089'>
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                    <zone h='21222' id='60' name='TigerTop1 - dest' show-title='false' w='22814' x='53931' y='36089'>
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                    <zone h='20976' id='63' name='TigerTop2 - dest' show-title='false' w='22814' x='53931' y='57311'>
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                    <zone h='20737' id='67' name='TigerTop3 - dest' show-title='false' w='22814' x='53931' y='78287'>
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                    <zone h='20976' id='69' name='TigerTop2' show-title='false' w='22830' x='76745' y='57311'>
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                    <zone h='20737' id='71' name='TigerTop3' show-title='false' w='22830' x='76745' y='78287'>
+                      <zone-style>
+                        <format attr='border-color' value='#000000' />
+                        <format attr='border-style' value='none' />
+                        <format attr='border-width' value='0' />
+                        <format attr='margin' value='4' />
+                      </zone-style>
+                    </zone>
+                  </zone>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1700' minheight='1700' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='73' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98048' id='72' param='vert' type-v2='layout-flow' w='99150' x='425' y='976'>
+                <zone fixed-size='91' forceUpdate='true' h='12432' id='12' is-fixed='true' is-scaled='1' param='C:/Users/XinHuang/Desktop/JP trip/airline/img/Tigerair logo.png' type-v2='bitmap' url='https://www.tigerairtw.com/' w='99150' x='425' y='976'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='4690' id='19' mode='checkdropdown' name='Tiger機票細項' param='[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:目的地:nk]' type-v2='filter' w='22814' x='53931' y='13408'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='4690' id='18' mode='dropdown' name='Tiger機票細項' param='[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:Calculation_1585548578500165645:nk]' type-v2='filter' w='22830' x='76745' y='13408'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='85616' id='15' is-fixed='true' name='Tiger機票細項' w='53506' x='425' y='13408'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone custom-title='true' h='8237' id='38' mode='compact' param='[Parameters].[參數 1]' type-v2='paramctrl' w='45644' x='53931' y='18098'>
+                  <formatted-text>
+                    <run fontsize='10'>旅程天數</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='70' h='9754' id='51' is-fixed='true' name='Slogan' show-title='false' w='45644' x='53931' y='26335'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='161' h='21222' id='60' is-fixed='true' name='TigerTop1 - dest' show-title='false' w='22814' x='53931' y='36089'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='161' h='21222' id='55' is-fixed='true' name='TigerTop1' show-title='false' w='22830' x='76745' y='36089'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='160' h='20976' id='63' is-fixed='true' name='TigerTop2 - dest' show-title='false' w='22814' x='53931' y='57311'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='160' h='20976' id='69' is-fixed='true' name='TigerTop2' show-title='false' w='22830' x='76745' y='57311'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='158' h='20737' id='67' is-fixed='true' name='TigerTop3 - dest' show-title='false' w='22814' x='53931' y='78287'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='158' h='20737' id='71' is-fixed='true' name='TigerTop3' show-title='false' w='22830' x='76745' y='78287'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{C1EA078A-4290-4CF7-A58E-68629D1778B6}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.5' show-side-pane='false' source-height='75'>
+    <window class='dashboard' maximized='true' name='Tiger'>
+      <viewpoints>
+        <viewpoint name='Slogan'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='TigerTop1'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='TigerTop1 - dest'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='TigerTop2'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='TigerTop2 - dest'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='TigerTop3'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='TigerTop3 - dest'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Tiger機票細項'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='38' />
+      <simple-id uuid='{B345683A-6472-41DB-A4AD-A07782AA6F90}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Slogan'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='38'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[參數 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:旅程日期:ok]</field>
+            <field>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:目的地:nk]</field>
+            <field>[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:目的地:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{016C4F17-AE5A-4BC0-9D14-D005325179D9}' />
+    </window>
+    <window class='worksheet' hidden='true' name='TigerTop1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[參數 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:Calculation_922956484389093380:nk]</field>
+            <field>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:Rank:nk]</field>
+            <field>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:旅程日期:ok]</field>
+            <field>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:目的地:nk]</field>
+            <field>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[yr:日期:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{CE0F9733-8A7D-45AD-8C2E-3BDA108E38BC}' />
+    </window>
+    <window class='worksheet' hidden='true' name='TigerTop1 - dest'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[參數 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:Calculation_922956484389093380:nk]</field>
+            <field>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:Rank:nk]</field>
+            <field>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:旅程日期:ok]</field>
+            <field>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:目的地:nk]</field>
+            <field>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[yr:日期:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{0B9D25FD-428F-432C-B087-5E698DC65AD0}' />
+    </window>
+    <window class='worksheet' hidden='true' name='TigerTop2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[參數 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:Calculation_922956484389093380:nk]</field>
+            <field>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:Rank:nk]</field>
+            <field>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:旅程日期:ok]</field>
+            <field>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:目的地:nk]</field>
+            <field>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[yr:日期:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{CD390FA8-494D-45DE-9AE9-18EA10244A3B}' />
+    </window>
+    <window class='worksheet' hidden='true' name='TigerTop2 - dest'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[參數 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:Calculation_922956484389093380:nk]</field>
+            <field>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:Rank:nk]</field>
+            <field>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:旅程日期:ok]</field>
+            <field>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:目的地:nk]</field>
+            <field>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[yr:日期:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{47565661-F4E0-4BB3-BFC8-9C25F3BD5CE4}' />
+    </window>
+    <window class='worksheet' hidden='true' name='TigerTop3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[參數 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:Calculation_922956484389093380:nk]</field>
+            <field>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:Rank:nk]</field>
+            <field>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:旅程日期:ok]</field>
+            <field>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:目的地:nk]</field>
+            <field>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[yr:日期:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{ED366477-3BBC-4510-A2B7-467BA6D26771}' />
+    </window>
+    <window class='worksheet' hidden='true' name='TigerTop3 - dest'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='compact' param='[Parameters].[參數 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:Calculation_922956484389093380:nk]</field>
+            <field>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:Rank:nk]</field>
+            <field>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:旅程日期:ok]</field>
+            <field>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[none:目的地:nk]</field>
+            <field>[federated.0a4vrc51d5c9c716mtqoj08kk5tq].[yr:日期:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{7956B2D4-C4D2-4B43-A8CB-F82E3CEE7143}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Tiger機票細項'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:Calculation_1585548578500165645:nk]' type='filter' />
+            <card param='[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:目的地:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1dz1rlj1fhkzbl19na93o07lavnr].[min:去程金額:qk]</field>
+            <field>[federated.1dz1rlj1fhkzbl19na93o07lavnr].[mn:日期:ok]</field>
+            <field>[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:Calculation_1585548578489610240:nk]</field>
+            <field>[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:Calculation_1585548578490683393:qk]</field>
+            <field>[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:Calculation_1585548578496647171:qk]</field>
+            <field>[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:Calculation_1585548578496901124:qk]</field>
+            <field>[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:Calculation_1585548578497085446:qk]</field>
+            <field>[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:Calculation_1585548578497232903:qk]</field>
+            <field>[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:Calculation_1585548578497302536:qk]</field>
+            <field>[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:Calculation_1585548578497503242:qk]</field>
+            <field>[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:Calculation_1585548578500165645:nk]</field>
+            <field>[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:Calculation_1585548578502877198:nk]</field>
+            <field>[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:Calculation_1585548578502918159:nk]</field>
+            <field>[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:Calculation_922956484338216962:qk]</field>
+            <field>[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:Calculation_922956484338270211:nk]</field>
+            <field>[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:往返:nk]</field>
+            <field>[federated.1dz1rlj1fhkzbl19na93o07lavnr].[none:目的地:nk]</field>
+            <field>[federated.1dz1rlj1fhkzbl19na93o07lavnr].[yr:日期:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{0CA5FC86-E81A-4D2F-9B20-8C15AFC20F8E}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Tiger' width='192'>
+      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
+      9elZRSL/Pwh1lVw7EbPaAAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>

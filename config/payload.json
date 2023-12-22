@@ -1,0 +1,16 @@
+{
+  "operationName": "appLiveDailyPrices",
+  "variables": {
+    "input": {
+      "sessionId": "6584fc4ecafc9c379d064778",
+      "origin": "TPE",
+      "destination": "FUK",
+      "userCurrency": "TWD",
+      "pricingCurrency": "TWD",
+      "since": "2023-12-30",
+      "until": "2024-01-30",
+      "source": "resultPagePriceBrick"
+    }
+  },
+  "query": "query appLiveDailyPrices($input: QueryLiveDailyPricesInput!) {\nappLiveDailyPrices(input: $input) {\norigin\ndestination\ndate\ncurrency\namount\nfareLabels {\nid\n}\n}\n}\n"
+}

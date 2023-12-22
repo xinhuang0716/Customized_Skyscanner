@@ -32,6 +32,8 @@ python main.py
 ```
 
 **【Tableau presentation】**
+- use Tableau Public to access this dashboard
+  https://public.tableau.com/app/profile/xin.huang3860/viz/TigerAirlineTicketbyxinhuangtien/Tiger#1
 ![Alt text](./img/tableau_preview.jpg)
 
 ## TODO

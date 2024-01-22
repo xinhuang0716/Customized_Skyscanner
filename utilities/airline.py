@@ -18,8 +18,8 @@ def TigerQuery(
     """
 
     # load configs
-    airport_dict = json.load(open(airport_path))
-    payload = json.load(open(payload_path))
+    airport_dict = json.load(open(airport_path, encoding="utf-8-sig"))
+    payload = json.load(open(payload_path, encoding="utf-8-sig"))
     payload_var = payload["variables"]
     if go:
         payload_var["input"]["destination"] = destination

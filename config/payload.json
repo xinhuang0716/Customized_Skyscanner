@@ -2,7 +2,7 @@
   "operationName": "appLiveDailyPrices",
   "variables": {
     "input": {
-      "sessionId": "6584fc4ecafc9c379d064778",
+      "sessionId": "661a26b0fc8a314ce3055372",
       "origin": "TPE",
       "destination": "FUK",
       "userCurrency": "TWD",

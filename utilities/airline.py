@@ -1,5 +1,5 @@
 ## import packages
-import json, requests, pandas as pd
+import json, requests, pandas as pd, datetime as dt
 
 
 ## function tiger airline
@@ -42,8 +42,9 @@ def TigerQuery(
         lambda x: "台北" if x == "TPE" else airport_dict[x]
     )
 
+    result['星期'] = result['date'].apply(lambda x : dt.datetime.strptime(x, '%Y-%m-%d').strftime("%A")[:3].upper())
     result["往返"] = "去程" if go else "回程"
-
+    
     result = result.rename(
         columns={
             "origin": "出發地" if go else "目的地",

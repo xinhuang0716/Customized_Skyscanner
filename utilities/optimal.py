@@ -34,7 +34,7 @@ def OptimalTrip(nday: int, file_path: str = "./data/result_tiger.csv") -> pd.Dat
     df["旅程日期"], df["總金額"], df["Rank"] = (
         nday,
         df["總金額"].apply(lambda x: int(x)),
-        ["Top1", "Top2", "Top3"] * int(df.shape[0] / 3),
+        sum([["Top1", "Top2", "Top3"][:i] for i in df['yyyymm'].value_counts()], []),
     )
 
     return df[["目的地", "日期", "總金額", "旅程日期", "Rank"]]

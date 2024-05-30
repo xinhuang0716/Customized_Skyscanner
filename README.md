@@ -40,6 +40,8 @@ python main.py
 
 1. more detailed information
 2. more airline (Peach, Jetstar and Scoot)
+3. fix the data preprocessing hitch in optimal.py
+4. switch visualization dashboard from Tableau to Streamlit or customized frontend
 
 ## Help
 

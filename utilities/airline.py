@@ -31,7 +31,7 @@ def TigerQuery(
     payload["variables"] = json.dumps(payload_var)
 
     # query
-    res = requests.post(API_url, data=payload, verify=False)
+    res = requests.post(API_url, json=payload, verify=False)
     result = pd.DataFrame.from_dict(res.json()["data"]["appLiveDailyPrices"])
 
     # data preprocessing

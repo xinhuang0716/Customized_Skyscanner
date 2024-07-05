@@ -18,4 +18,5 @@ df = pd.concat([df_tiger_go, df_tiger_back])
 
 ## output
 df.to_csv("./data/result_tiger.csv", index = False, encoding = "utf-8-sig")
+df.to_json('./data/result_tiger.json')
 #pd.concat([OptimalTrip(i) for i in range(2, 16)]).to_csv("./data/optimal_trip_tiger.csv", index = False, encoding = "utf-8-sig")

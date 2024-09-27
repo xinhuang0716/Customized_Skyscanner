@@ -17,6 +17,8 @@ def TigerQuery(
     the maximum of query perriod(start 2 end) is six months
     """
 
+    print(f"In Processing: {destination},", "去程" if go else "回程", f"{start_date}~{end_date}")
+    
     # load configs
     airport_dict = json.load(open(airport_path, encoding="utf-8-sig"))
     payload = json.load(open(payload_path, encoding="utf-8-sig"))
